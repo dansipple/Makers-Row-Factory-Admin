@@ -40,7 +40,7 @@ LOCK TABLES `factory` WRITE;
 
 INSERT INTO `factory` (`id`, `name`, `email`, `address`, `lat`, `long`)
 VALUES
-	(11,'Dan\'s Fabrics','dan@fabricsbydan.com','20 Jay Street, Brooklyn, NY 11201, USA',41.259041,-73.682526),
+	(11,'Dan\'s Fabrics','dan@fabricsbydan.com','20 Jay Street, Brooklyn, NY 11201, USA',40.7040072,-73.986759),
 	(12,'Mark\'s Fabrics','mark@thefabrics.com','42 East 32nd Street, New York, NY 10016, USA',40.746052,-73.982903),
 	(13,'Christine\'s Dress Shop','christine@chrstinesdresses.com','218 Madison Avenue, New York, NY 10016, USA',40.749283,-73.982155),
 	(17,'Jersey City Goods','dan@jerseycitygoods.com','Jersey City, NJ, USA',40.728157,-74.077644);
