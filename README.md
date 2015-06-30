@@ -13,7 +13,7 @@ To use the vagrant file, you will need to have done the following:
   2. Download and Install [Vagrant](https://www.vagrantup.com/downloads.html)
   3. Install [Ansible](http://docs.ansible.com/intro_installation.html)
 
-Once all of that is done, you need to open a shell prompt(terminal on mac) and cd into the root directory that contains the Vagrantfile and the other scripts contained in this repo. 
+Once all of that is done, you need to open a shell prompt(terminal on mac) and cd into the root directory of this repo that contains the Vagrantfile. 
 
 Now you can simply type in 'vagrant up', and Vagrant will create a new VM, install the base box, and configure it using the ansible playbook.
 
@@ -29,10 +29,10 @@ Returns all of the factories in the database
 ### POST - /api/factory
 Creates a new Factory
   Fields to POST:
-     "factory-name"
-     "email-address"
-     "street-address"
-     "factory-tags"
+      "factory-name",
+      "email-address",
+      "street-address",
+      "factory-tags"
     
 ### Get - /api/factory/<factory_id>
 Returns information for the factory with the id <factory_id>
