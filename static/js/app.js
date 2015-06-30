@@ -26,7 +26,7 @@ function initialize() {
       type: 'GET',
       success: function(factories){
         $.each(factories.factories, function( i, val ){
-          $('#factories').append('<li data-id="'+val.id+'"><div class="row"><div class="col-sm-9"><h2>'+val.name+'</h2></div><div class="col-sm-3"><a href="mailto:'+val.email+'" class="contact-email btn-block">Send Email</a></div></div><div class="row"><div class="col-sm-12"><h3>'+val.address+'</h3></div></div><div class="row"><div class="col-sm-10"><ul class="tags" data-id="'+val.id+'"></ul></div><div class="col-sm-2 action-btns"><a class="btn-edit-factory" data-id="'+val.id+'"><i class="fa fa-pencil"></i></a><a class="btn-delete-factory" data-id="'+val.id+'"><i class="fa fa-times"></i></a></div></div></li></div></div></li>');
+          $('#factories').append('<li data-id="'+val.id+'"><div class="row"><div class="col-sm-9 col-xs-8"><h2>'+val.name+'</h2></div><div class="col-sm-3 col-xs-4"><a href="mailto:'+val.email+'" class="contact-email btn-block">Send Email</a></div></div><div class="row"><div class="col-sm-12"><h3>'+val.address+'</h3></div></div><div class="row"><div class="col-xs-10"><ul class="tags" data-id="'+val.id+'"></ul></div><div class="col-xs-2 action-btns"><a class="btn-edit-factory" data-id="'+val.id+'"><i class="fa fa-pencil"></i></a><a class="btn-delete-factory" data-id="'+val.id+'"><i class="fa fa-times"></i></a></div></div></li></div></div></li>');
           if(val.tags){
             $.each(val.tags, function(n, tag){
               $("ul.tags[data-id='" + val.id +"']").append('<li>'+tag.name+'</li>')
@@ -46,7 +46,7 @@ function initialize() {
 // End Get all Factories
 
 // Called When Add Factory Form is Submitted
-  $('#add-factory').on('submit', function(){
+  $('#add-factory').on('submit', function(){    
     $.ajax({
         url: "/api/factory",
         type: 'POST',
@@ -54,7 +54,7 @@ function initialize() {
         success: function(newFactory){
           $('#newFactory').modal('hide');
           $(':input','#add-factory').not(':button, :submit, :reset, :hidden').val('');
-          $('#factories').append('<li data-id="'+newFactory.factory.id+'"><div class="row"><div class="col-sm-9"><h2>'+newFactory.factory.name+'</h2></div><div class="col-sm-3"><a href="mailto:'+newFactory.factory.email+'" class="contact-email btn-block">Send Email</a></div></div><div class="row"><div class="col-sm-12"><h3>'+newFactory.factory.address+'</h3></div></div><div class="row"><div class="col-sm-10"><ul class="tags" data-id="'+newFactory.factory.id+'"></ul></div><div class="col-sm-2 action-btns"><a class="btn-edit-factory" data-id="'+newFactory.factory.id+'"><i class="fa fa-pencil"></i></a><a class="btn-delete-factory" data-id="'+newFactory.factory.id+'"><i class="fa fa-times"></i></a></div></div></li></div></div></li>');
+          $('#factories').append('<li data-id="'+newFactory.factory.id+'"><div class="row"><div class="col-sm-9 col-xs-8"><h2>'+newFactory.factory.name+'</h2></div><div class="col-sm-3 col-xs-4"><a href="mailto:'+newFactory.factory.email+'" class="contact-email btn-block">Send Email</a></div></div><div class="row"><div class="col-sm-12"><h3>'+newFactory.factory.address+'</h3></div></div><div class="row"><div class="col-xs-10"><ul class="tags" data-id="'+newFactory.factory.id+'"></ul></div><div class="col-xs-2 action-btns"><a class="btn-edit-factory" data-id="'+newFactory.factory.id+'"><i class="fa fa-pencil"></i></a><a class="btn-delete-factory" data-id="'+newFactory.factory.id+'"><i class="fa fa-times"></i></a></div></div></li></div></div></li>');
           if(newFactory.factory.tags){
             $.each(newFactory.factory.tags, function(n, tag){
               $("ul.tags[data-id='"+newFactory.factory.id+"']").append('<li>'+tag.name+'</li>')
@@ -84,7 +84,7 @@ function initialize() {
         success: function(newFactory){
           $('#editFactory').modal('hide');
           $(':input','#add-factory').not(':button, :submit, :reset, :hidden').val('');
-          $("#factories li[data-id='"+factory_id+"']").html('<div class="row"><div class="col-sm-9"><h2>'+newFactory.factory.name+'</h2></div><div class="col-sm-3"><a href="mailto:'+newFactory.factory.email+'" class="contact-email btn-block">Send Email</a></div></div><div class="row"><div class="col-sm-12"><h3>'+newFactory.factory.address+'</h3></div></div><div class="row"><div class="col-sm-10"><ul class="tags" data-id="'+newFactory.factory.id+'"></ul></div><div class="col-sm-2 action-btns"><a class="btn-edit-factory" data-id="'+newFactory.factory.id+'"><i class="fa fa-pencil"></i></a><a class="btn-delete-factory" data-id="'+newFactory.factory.id+'"><i class="fa fa-times"></i></a></div></div></li></div></div>');
+          $("#factories li[data-id='"+factory_id+"']").html('<div class="row"><div class="col-sm-9 col-xs-8"><h2>'+newFactory.factory.name+'</h2></div><div class="col-sm-3 col-xs-4"><a href="mailto:'+newFactory.factory.email+'" class="contact-email btn-block">Send Email</a></div></div><div class="row"><div class="col-sm-12"><h3>'+newFactory.factory.address+'</h3></div></div><div class="row"><div class="col-xs-10"><ul class="tags" data-id="'+newFactory.factory.id+'"></ul></div><div class="col-xs-2 action-btns"><a class="btn-edit-factory" data-id="'+newFactory.factory.id+'"><i class="fa fa-pencil"></i></a><a class="btn-delete-factory" data-id="'+newFactory.factory.id+'"><i class="fa fa-times"></i></a></div></div></li></div></div>');
             if(newFactory.factory.tags){
               $.each(newFactory.factory.tags, function(n, tag){
                 $("ul.tags[data-id='"+newFactory.factory.id+"']").append('<li>'+tag.name+'</li>')
