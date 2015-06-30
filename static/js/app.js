@@ -60,6 +60,14 @@ function initialize() {
               $("ul.tags[data-id='"+newFactory.factory.id+"']").append('<li>'+tag.name+'</li>')
             });
           }
+          // Add Google Map Markers
+          var latLng = new google.maps.LatLng(newFactory.factory.lat, newFactory.factory.long);
+          var marker = new google.maps.Marker({
+                position: latLng,
+                title: newFactory.factory.name,
+                map: map,
+            });
+          latlngbounds.extend(latLng);
         },
     });
     return false;
