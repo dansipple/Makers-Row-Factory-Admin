@@ -1,0 +1,28 @@
+---
+- hosts: all
+  sudo: true
+  tasks:
+    - name: update apt cache
+      apt: update_cache=yes
+    - name: install mysql
+      apt: name=mysql-server state=present
+    - name: install python
+      action: apt name=python state=present
+    - name: install pip
+      action: apt name=python-pip state=present
+    - name: install flask
+      action: pip name=flask state=present
+    - name: install flask-sqlalchemy
+      action: pip name=flask-sqlalchemy state=present
+    - name: install python-mysqldb
+      apt: name=python-mysqldb state=present
+    - name: create database
+      mysql_db: name=Factories state=present
+    - name: create db user
+      mysql_user: name=makersrow password=12345 priv=*.*:ALL state=present
+    - name: seed database
+      mysql_db: state=import name=Factories target=/vagrant/tmp/Factories.sql
+    - name: start flask app
+      command: python /vagrant/app.py
+      async: 1000
+      poll: 0

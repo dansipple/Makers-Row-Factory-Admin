@@ -1,0 +1,196 @@
+body{
+	background:#efefef;
+	font-family:"Open Sans",sans-serif;
+	font-size:13px;
+	font-weight:400;
+}
+h1,h2{
+	color:#282D32;
+	font-weight:400;
+	font-family:'Oswald', sans-serif;
+}
+
+/* Header Styles */
+.navbar{
+	background:#efefef;
+	box-shadow:0px 0px 4px rgba(0, 0, 0, 0.5) !important;
+	border-radius:0;
+	margin:0;
+	position:relative;
+	z-index:10;
+}
+.navbar .navbar-brand{
+	height:70px;
+	width:140px;
+	border-right:1px solid #CFCFCF;
+	background:url('/static/img/logo.svg');
+	text-indent:-9999px;
+}
+.navbar .search-big{
+	font-size:15px;
+	height:40px;
+	padding:9px 10px;
+	border-radius:5px;
+	background: #fff;
+	border:2px solid #CFCFCF;
+	min-width:325px;
+	margin:15px;
+}
+.navbar .navbar-nav{
+	padding:15px;
+}
+.navbar .navbar-nav a{
+	color: #282D32;
+	min-width:90px;
+	text-transform: uppercase;
+	font-weight:400;
+	font-family: 'Oswald', sans-serif;
+	text-align: center;
+	font-size:12px;
+	padding:0 16px;
+	line-height:40px;
+}
+.navbar .navbar-nav a.sign-up{
+	color:#fff;
+	background:#588195;
+	border-radius:4px;
+}
+.navbar .navbar-nav a:hover{
+	background:#F03A3B;
+	color:#fff;
+}
+.navbar-toggle{
+	border:none;
+	margin-top:16px;
+}
+.navbar-toggle .icon-bar {
+	background:#282D32;
+}
+.navbar-toggle:hover{
+	background:none;
+}
+.navbar-toggle:hover .icon-bar {
+	background:#F03A3B;
+}
+
+h1.page-title{
+	font-size:22px;
+}
+
+/** Factory List Styles **/
+ul#factories{
+	list-style-type:none;
+	padding:0;
+	overflow-y:scroll;
+	margin-bottom:0;
+}
+ul#factories li{
+	display: block;
+	padding: 20px 15px;
+	border-top:1px solid #cfcfcf;
+}
+ul#factories li h2{
+	font-size:19px;
+	margin:0 0 5px;
+}
+ul#factories li h3{
+	font-size:13px;
+	margin:0;
+}
+ul#factories li a.contact-email{
+	background:#fff;
+	padding:10px 10px;
+	border-radius:5px;
+	border:1px solid #cfcfcf;
+	color:#454545;
+	text-align: center;
+	font-family: 'Oswald', sans-serif;
+}
+
+ul#factories ul.tags{
+	list-style-type: none;
+	padding:0;
+	margin-top:10px;
+}
+ul#factories ul.tags li{
+	float:left;
+	background:#fff;
+	color:#282D32;
+	border:1px solid #cfcfcf;
+	padding:5px 8px;
+	border-radius:5px;
+	font-size:11px;
+	margin:2px;
+
+}
+
+
+/** Modal Styles **/
+.modal-header{
+	background:#282D32;
+}
+.modal-header h2{
+	color:#fff;
+	font-size:22px;
+}
+.modal-header .close {
+    color: #fff;
+    text-shadow: none;
+    opacity: 1;
+}
+.modal-body{
+	background:#efefef;
+}
+.modal .form-control{
+	border: 2px solid #CFCFCF;
+	background:#fff;
+	font-size:15px;
+	border-radius:4px;
+	height:40px;
+}
+.modal label{
+	font-weight:300;
+}
+
+/** Map Styles **/
+.map-col{
+	padding:0;
+}
+#map{
+	min-width:100%;
+	min-height:380px;
+	width:100%;
+	border-left:3px solid #cfcfcf;
+}
+
+
+/** Button Styles **/
+.btn.btn-primary{
+	color:#fff;
+	background:#588195;
+	border:none;
+	border-radius:4px;
+	font-family:'Oswald', sans-serif;
+	font-size:13px;
+}
+.btn-new-factory{
+	margin-top:10px;
+}
+.btn-save{
+	padding:10px 35px;
+}
+.action-btns a{
+	display: inline-block;
+	padding:5px;
+	text-align: center;
+	background:#588195;;
+	color:#fff;
+	border-radius:4px;
+	width:48%;
+	margin: 0 1%;
+	font-size:15px;
+	cursor:pointer;
+}
+.action-btns a.btn-delete-factory{
+	background:#F03A3B;
+}
