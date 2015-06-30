@@ -34,14 +34,14 @@ Creates a new Factory
       "street-address",
       "factory-tags"
     
-### Get - /api/factory/<factory_id>
-Returns information for the factory with the id <factory_id>
+### Get - /api/factory/factory_id
+Returns information for the factory with the id factory_id
 
-### PUT - /api/factory/<factory_id>
-Updates information for the factory with the id <factory_id>
+### PUT - /api/factory/factory_id
+Updates information for the factory with the id factory_id
 
-### DELETE - /api/factory/<factory_id>
-Deletes the factory with the id <factory_id>
+### DELETE - /api/factory/factory_id
+Deletes the factory with the id factory_id
 
 
 ## Known Problems
