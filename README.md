@@ -29,10 +29,10 @@ Returns all of the factories in the database
 ### POST - /api/factory
 Creates a new Factory
   Fields to POST:
-    -> "factory-name"
-    -> "email-address"
-    -> "street-address"
-    -> "factory-tags"
+     "factory-name"
+     "email-address"
+     "street-address"
+     "factory-tags"
     
 ### Get - /api/factory/<factory_id>
 Returns information for the factory with the id <factory_id>
